@@ -1,0 +1,79 @@
+.visually-hidden {
+  position: absolute;
+
+  width: rem(1px);
+  height: rem(1px);
+  margin: rem(-1px);
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+.section-title {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: rem(40px);
+
+  font-family: Lobster, open-sans, sans-serif;;
+  font-size: rem(24px);
+  line-height: rem(30px);
+  font-weight: 400;
+  letter-spacing: rem(3px);
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  &::after {
+      content: "";
+      position: absolute;
+
+      width: rem(100px);
+      height: rem(2px);
+
+      bottom: rem(-10px);
+      left: 50%;
+      margin-left: rem(-50px);
+
+      background-color: $orange;
+  }
+
+  @media (min-width: $tablet) {
+      margin-bottom: rem(60px);
+
+      font-size: rem(30px);
+      line-height: rem(35px);
+  }
+}
+
+.text--hidden {
+  display: none !important;
+}
+
+.main__wrapper {
+  margin: 0 rem(20px);
+  // border: 1px solid red;
+
+  @media (min-width: $desktop) {
+    width: calc(100% - #{rem(40px)});
+    margin: 0 auto;
+    max-width: rem(1200px);
+  }
+}
+
+.modal-overlay {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  cursor: pointer;
+
+  transition: opacity 250ms;
+  background: black;
+
+  z-index: 4000;
+}

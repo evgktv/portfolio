@@ -1,0 +1,61 @@
+// Colors
+$white: #FFF;
+$black: #000;
+
+
+$blue: #4b6cc1;
+$orange: #f60;
+
+$main-txt: #4d4d4d;
+
+$bg-grey: #eee;
+
+
+$base-font: 16;
+
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function rem($num) {
+  @return strip-unit($num) / $base-font * 1rem;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
+}
+
+
+@mixin container-fluid {
+  width: 94%;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+      width: 88%;
+      max-width: 1200px;
+  }
+}
+
+@mixin container {
+  width: 94%;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+      width: 640px;
+  }
+
+  @media (min-width: $desktop) {
+      width: 960px;
+  }
+}
+
+$sm: 960px; /* <= 960px */
+
+$tablet: 768px;
+$desktop: 961px;

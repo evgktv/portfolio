@@ -1,0 +1,29 @@
+@import "variables";
+@import "normalize-scss/sass/normalize/import-now";
+// @import "swiper/dist/css/swiper";
+// @import "aos/dist/aos";
+// @import "lity/dist/lity";
+
+@import "variables";
+
+// Common styles
+@import "fonts";
+@import "common";
+@import "scaffolding";
+
+
+
+// Blocks
+@import "blocks/header";
+@import "blocks/main-nav";
+@import "blocks/work";
+@import "blocks/features";
+@import "blocks/about-me";
+@import "blocks/skills";
+@import "blocks/portfolio";
+@import "blocks/portfolio-info";
+@import "blocks/feedback";
+@import "blocks/footer";
+
+// Responsive Styles
+@import "responsive";

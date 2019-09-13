@@ -1,0 +1,380 @@
+.portfolio-info__item {
+  visibility: hidden;
+  opacity: 0;
+
+  width: 0;
+  height: 0;
+
+  left: 10%;
+  top: 5%;
+  background: $bg-grey;
+  z-index: 4400;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 800ms;
+  pointer-events: auto;
+
+  &.active {
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+    width: 80%;
+    min-height: 90%;
+    transform: scale(1);
+  }
+}
+
+.portfolio-info__close {
+  position: absolute;
+  content: '';
+
+  top: rem(14px);
+  right: rem(14px);
+
+  width: 20px;
+  height: 20px;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+
+    left: rem(-1px);
+    top: rem(8px);
+
+    width: rem(20px);
+    height: rem(2px);
+    background: $main-txt;
+  }
+
+  &::after {
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+
+    &::after,
+    &::before {
+      background: $orange;
+    }
+  }
+}
+
+.portfolio-info__header {
+  padding-bottom: rem(10px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: rem(3px) solid $blue;
+
+  h3 {
+    width: 65%;
+    margin: 0;
+
+    font-size: rem(22px);
+    line-height: rem(24px);
+    font-weight: 700;
+    letter-spacing: rem(3px);
+
+    text-transform: uppercase;
+  }
+}
+
+.portfolio-info__main {
+  padding-top: rem(28px);
+  padding-right: rem(60px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // padding: rem(20px);
+  height: 100%;
+  overflow: auto;
+}
+
+.portfolio-info__left {
+  position: relative;
+
+  form {
+    input[type="radio"] {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet) {
+
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.portfolio-info__buttons {
+  margin-left: rem(60px);
+  font-size: 0;
+
+  label {
+
+    cursor: pointer;
+    margin-right: rem(16px);
+
+    &:hover {
+      span {
+        color: lighten($orange, 20%);
+      }
+    }
+
+    span {
+      font-size: rem(16px);
+      text-transform: uppercase;
+    }
+  }
+}
+
+.portfolio-info__left-transform {
+  height: 100%;
+  margin-top: rem(12px);
+
+  perspective: 700px;
+}
+
+.portfolio-info__img {
+  display: none;
+  width: rem(360px);
+  height: 530px;
+  overflow-y: auto;
+  margin: 0 auto;
+  transform: rotate3d(24, 14, -2, 15deg);
+
+  box-shadow: -24px 20px 32px #999;
+
+  img {
+    width: 100%;
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  &--mob {}
+}
+
+.portfolio-info__right {
+
+  @media (min-width: $tablet) {
+    width: 45%;
+  }
+}
+
+// .portfolio-info__item.active #view-1:checked~.portfolio-info__left-transform .portfolio-info__img.portfolio-info__img--desk {
+//   display: block;
+// }
+
+// .portfolio-info__item.active #view-1:checked ~ .portfolio-info__buttons label[for="view-1"] {
+//   cursor: default;
+//   .portfolio-info__btn-label{
+//     color: $orange;
+//   }
+// }
+
+// .portfolio-info__item.active  #view-3:checked~.portfolio-info__left-transform .portfolio-info__img.portfolio-info__img--mob {
+//   display: block;
+// }
+
+// .portfolio-info__item.active #view-3:checked ~ .portfolio-info__buttons label[for="view-3"] {
+//   cursor: default;
+//   .portfolio-info__btn-label{
+//     color: $orange;
+//   }
+// }
+
+// .portfolio-info__item.active  #view-2:checked~.portfolio-info__left-transform .portfolio-info__img.portfolio-info__img--tab {
+//   display: block;
+// }
+
+// .portfolio-info__item.active  #view-2:checked ~ .portfolio-info__buttons label[for="view-2"] {
+//   cursor: default;
+//   .portfolio-info__btn-label{
+//     color: $orange;
+//   }
+// }
+
+.portfolio-info__slider-prev,
+.portfolio-info__slider-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.portfolio-info__slider-prev {
+  left: rem(30px) !important;
+}
+
+.portfolio-info__slider-next {
+  right: rem(30px) !important;
+}
+
+.portfolio-info__intro {
+  position: relative;
+  margin-top: rem(32px);
+  padding-bottom: rem(32px);
+
+  &::after {
+    position: absolute;
+    content: '';
+
+    width: 100%;
+    height: rem(2px);
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, $blue, $bg-grey);
+  }
+
+  p {
+    font-style: italic;
+    margin: 0;
+  }
+}
+
+.portfolio-info__info {
+  position: relative;
+  margin-top: rem(32px);
+  padding-bottom: rem(32px);
+
+  &::after {
+    position: absolute;
+    content: '';
+
+    width: 100%;
+    height: rem(2px);
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, $blue, $bg-grey);
+  }
+
+  ul {
+    margin-top: rem(16px);
+    margin-left: rem(16px);
+
+    li {
+      position: relative;
+      padding-left: rem(20px);
+      font-size: rem(14p);
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: rem(7px);
+        height: rem(7px);
+        left: 0;
+        top: 50%;
+        margin-top: rem(-4px);
+
+        border-radius: 50%;
+
+        background: $orange;
+      }
+    }
+  }
+}
+
+.portfolio-info__tech {
+  display: block;
+  font-size: 22px;
+}
+
+.portfolio-info__link {
+
+  margin-top: rem(48px);
+  margin-bottom: rem(28px);
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(150px);
+    height: rem(48px);
+    color: $main-txt;
+
+    border: rem(2px) solid $blue;
+
+    border-radius: rem(24px);
+
+    &:hover {
+      color: lighten($main-txt, 20%);
+    }
+
+    &:active {
+      border-color: lighten($blue, 20%);
+    }
+  }
+}
+
+
+.portfolio-info__mouse {
+  position: absolute;
+  top: 100px;
+  right: 15%;
+  transform: rotate(-6deg);
+
+  path,
+  polyline {
+    fill: none;
+    stroke: $main-txt;
+    stroke-width: 2;
+  }
+
+  polyline {
+    opacity: 0;
+    animation: mouse .7s infinite, mouse_intro 2.25s forwards;
+  }
+
+  polyline+polyline {
+    animation-delay: .1s;
+  }
+}
+
+@keyframes mouse {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+
+  50% {
+    transform: translate(0, -2px);
+  }
+}
+
+@keyframes mouse_intro {
+
+  0%,
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.portfolio-info__radio {
+
+  input:checked + .portfolio-info__btn-label {
+    cursor: default;
+
+    color: $orange;
+  }
+}

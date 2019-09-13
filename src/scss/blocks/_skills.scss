@@ -1,0 +1,146 @@
+.skills {
+  position: relative;
+  width: 100%;
+  padding: rem(60px) 0;
+
+  background: #fff;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.skills__image-border {
+  width: rem(80px);
+  height: rem(80px);
+  margin-right: rem(20px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  border: rem(2px) solid $blue;
+  border-radius: 50%;
+
+  @media (min-width: $tablet) {
+    width: rem(100px);
+    height: rem(100px);
+    margin-right: 0;
+  }
+}
+
+.skills__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(50px);
+  height: rem(50px);
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    path, g {
+      fill: $blue;
+      stroke: $blue;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    width: rem(67px);
+    height: rem(67px);
+  }
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+
+  // align-items: stretch;
+
+  @media (min-width: $tablet) {
+
+  }
+}
+
+.skills__item {
+  margin-bottom: rem(32px);
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  min-height: rem(100px);
+  min-width: rem(280px);
+  max-width: rem(353px);
+  box-sizing: border-box;
+
+  @media (min-width: 658px) {
+    width: calc(50% - #{rem(20px)});
+    margin-bottom: rem(44px);
+  }
+
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    min-width: rem(220px);
+    width: rem(220px);
+  }
+
+  @media (min-width: $desktop) {
+
+    margin-bottom: rem(60px);
+  }
+}
+
+.skills__item-text {
+  width: 62%;
+
+  box-sizing: border-box;
+
+  @media (min-width: $tablet) {
+    width: 100%;
+
+    text-align: center;
+  }
+}
+
+.skills__name {
+  margin: 0;
+  margin-bottom: rem(10px);
+
+  font-family: Raleway, open-sans, sans-serif;;
+  color: $orange;
+  font-size: rem(18px);
+  line-height: rem(24px);
+  font-weight: 700;
+  letter-spacing: rem(3px);
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  @media (min-width: $tablet) {
+
+    text-align: center;
+    margin-top: rem(10px);
+  }
+}
+
+.skills__description {
+  margin: 0;
+
+  font-size: rem(14px);
+  line-height: rem(22px);
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
