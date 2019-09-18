@@ -68,7 +68,7 @@
 }
 
 .skills__item {
-  margin-bottom: rem(32px);
+  margin-bottom: rem(36px);
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -78,6 +78,10 @@
   min-width: rem(280px);
   max-width: rem(353px);
   box-sizing: border-box;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (min-width: 658px) {
     width: calc(50% - #{rem(20px)});

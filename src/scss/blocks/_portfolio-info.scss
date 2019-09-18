@@ -3,24 +3,38 @@
   opacity: 0;
 
   width: 0;
-  height: 0;
+  // height: 0;
 
-  left: 10%;
   top: 5%;
   background: $bg-grey;
   z-index: 4400;
-  overflow: hidden;
+  overflow-y: auto;
   transform: scale(0);
   transition: transform 800ms;
   pointer-events: auto;
+
+  &.hidden {
+      height: 0;
+  }
 
   &.active {
     position: fixed;
     opacity: 1;
     visibility: visible;
-    width: 80%;
-    min-height: 90%;
+    left: 5%;
+    width: 90%;
+    max-height: 90%;
     transform: scale(1);
+
+    @media (min-width: $tablet) {
+
+    }
+
+    @media (min-width: $desktop) {
+      left: 10%;
+      width: 80%;
+      min-height: 90%;
+    }
   }
 }
 
@@ -65,6 +79,7 @@
 }
 
 .portfolio-info__header {
+  position: relative;
   padding-bottom: rem(10px);
   display: flex;
   flex-direction: row;
@@ -72,35 +87,83 @@
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: rem(3px) solid $blue;
+  &--mob {
+    margin-top: rem(20px);
+    text-align: center;
+
+    &::after {
+      position: absolute;
+      content: '';
+  
+      width: 100%;
+      height: rem(2px);
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(70% 80%, $blue, #fff);
+    }
+
+  }
+
+  &--nomob {
+    display: none;
+  }
+
+  @media (min-width: $tablet) {
+
+
+    &--mob {
+      display:none;
+    }
+
+    &--nomob {
+      display: block;
+      border-bottom: rem(3px) solid $blue;
+    }
+  }
 
   h3 {
-    width: 65%;
+    width: 100%;
     margin: 0;
 
-    font-size: rem(22px);
-    line-height: rem(24px);
+    font-size: rem(16px);
+    line-height: rem(22px);
     font-weight: 700;
     letter-spacing: rem(3px);
 
     text-transform: uppercase;
+
+    @media (min-width: $tablet) {
+      font-size: rem(18px);
+      line-height: rem(24px);
+    }
+
+    @media (min-width: $desktop) {
+      font-size: rem(22px);
+      // width: 65%;
+    }
   }
 }
 
 .portfolio-info__main {
   padding-top: rem(28px);
-  padding-right: rem(60px);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  // padding: rem(20px);
+  padding-right: rem(20px);
+  padding-left: rem(10px);
+
   height: 100%;
   overflow: auto;
+
+  @media (min-width: $tablet) {
+    padding-right: rem(60px);
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .portfolio-info__left {
   position: relative;
-
+  
   form {
     input[type="radio"] {
       display: none;
@@ -108,6 +171,7 @@
   }
 
   @media (min-width: $tablet) {
+    padding-bottom: rem(60px);
 
     width: 50%;
     height: 100%;
@@ -115,13 +179,33 @@
 }
 
 .portfolio-info__buttons {
-  margin-left: rem(60px);
+  margin-top: rem(28px);
   font-size: 0;
+  text-align: center;
+
+  @media (min-width: $tablet) {
+    margin-right: rem(24px);
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop) {
+    // margin-left: rem(60px);
+  }
 
   label {
 
     cursor: pointer;
-    margin-right: rem(16px);
+    margin-right: rem(12px);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+
+    @media (min-width: $tablet) {
+
+      margin-right: rem(16px);
+    }
 
     &:hover {
       span {
@@ -130,8 +214,13 @@
     }
 
     span {
-      font-size: rem(16px);
+      font-size: rem(12px);
       text-transform: uppercase;
+
+      @media (min-width: $tablet) {
+
+        font-size: rem(16px);
+      }
     }
   }
 }
@@ -143,15 +232,28 @@
   perspective: 700px;
 }
 
+.portfolio-info__slider-item.swiper-slide {
+// width: 50% !important;
+}
+
 .portfolio-info__img {
   display: none;
-  width: rem(360px);
-  height: 530px;
+  width: 90%;
+
+  max-width: rem(360px);
+  max-height: rem(420px);
   overflow-y: auto;
   margin: 0 auto;
-  transform: rotate3d(24, 14, -2, 15deg);
 
-  box-shadow: -24px 20px 32px #999;
+  box-shadow: -6px 8px 16px #999;
+
+  @media (min-width: $tablet) {
+    width: 70%;
+
+    max-height: rem(460px);  
+    transform: rotate3d(24, 14, -2, 15deg);
+    box-shadow: -24px 20px 32px #999;
+}
 
   img {
     width: 100%;
@@ -161,55 +263,12 @@
     -webkit-user-select: none;
     user-select: none;
   }
-
-  &--mob {}
 }
-
-.portfolio-info__right {
-
-  @media (min-width: $tablet) {
-    width: 45%;
-  }
-}
-
-// .portfolio-info__item.active #view-1:checked~.portfolio-info__left-transform .portfolio-info__img.portfolio-info__img--desk {
-//   display: block;
-// }
-
-// .portfolio-info__item.active #view-1:checked ~ .portfolio-info__buttons label[for="view-1"] {
-//   cursor: default;
-//   .portfolio-info__btn-label{
-//     color: $orange;
-//   }
-// }
-
-// .portfolio-info__item.active  #view-3:checked~.portfolio-info__left-transform .portfolio-info__img.portfolio-info__img--mob {
-//   display: block;
-// }
-
-// .portfolio-info__item.active #view-3:checked ~ .portfolio-info__buttons label[for="view-3"] {
-//   cursor: default;
-//   .portfolio-info__btn-label{
-//     color: $orange;
-//   }
-// }
-
-// .portfolio-info__item.active  #view-2:checked~.portfolio-info__left-transform .portfolio-info__img.portfolio-info__img--tab {
-//   display: block;
-// }
-
-// .portfolio-info__item.active  #view-2:checked ~ .portfolio-info__buttons label[for="view-2"] {
-//   cursor: default;
-//   .portfolio-info__btn-label{
-//     color: $orange;
-//   }
-// }
 
 .portfolio-info__slider-prev,
 .portfolio-info__slider-next {
   position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%);
+  top: rem(40px) !important;
 
   &:focus {
     outline: none;
@@ -218,10 +277,26 @@
 
 .portfolio-info__slider-prev {
   left: rem(30px) !important;
+
+  @media (min-width: $tablet) {
+
+    left: rem(12px) !important;
+  }
 }
 
 .portfolio-info__slider-next {
   right: rem(30px) !important;
+}
+
+
+.portfolio-info__right {
+
+  margin-top: rem(12px);
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+    width: 45%;
+  }
 }
 
 .portfolio-info__intro {
@@ -229,6 +304,16 @@
   margin-top: rem(32px);
   padding-bottom: rem(32px);
 
+  @media (min-width: $tablet) {
+    margin-top: rem(24px);
+    padding-bottom: rem(24px);
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: rem(32px);
+    padding-bottom: rem(32px);
+  }
+  
   &::after {
     position: absolute;
     content: '';
@@ -250,6 +335,16 @@
   position: relative;
   margin-top: rem(32px);
   padding-bottom: rem(32px);
+
+  @media (min-width: $tablet) {
+    margin-top: rem(24px);
+    padding-bottom: rem(24px);
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: rem(32px);
+    padding-bottom: rem(32px);
+  }
 
   &::after {
     position: absolute;
@@ -294,9 +389,20 @@
 }
 
 .portfolio-info__link {
+  margin-top: rem(32px);
+  margin-bottom: rem(32px);
+
+  @media (min-width: $tablet) {
+
+    margin-top: rem(32px);
+    margin-bottom: rem(40px);
+}
+
+@media (min-width: $desktop) {
 
   margin-top: rem(48px);
   margin-bottom: rem(28px);
+}
 
   a {
     display: flex;
@@ -311,21 +417,32 @@
     border-radius: rem(24px);
 
     &:hover {
-      color: lighten($main-txt, 20%);
+      color: $orange;
     }
 
     &:active {
       border-color: lighten($blue, 20%);
+      color: lighten($orange, 20%);
     }
   }
 }
 
-
 .portfolio-info__mouse {
+  display: none;
   position: absolute;
-  top: 100px;
-  right: 15%;
+
+  @media (min-width: $tablet) {
+
+  display: block;
+  top: rem(140px);
+  right: 6%;
   transform: rotate(-6deg);
+}
+
+@media (min-width: $desktop) {
+
+  right: 10%;
+}
 
   path,
   polyline {

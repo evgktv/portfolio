@@ -147,7 +147,11 @@
 .portfolio__slider {
   position: relative !important;
   z-index: 1000 !important;
-  padding: rem(16px) 0 !important;
+  padding: rem(28px) 0 !important;
+
+  @media (min-width: $tablet) {
+    padding: rem(40px) 0 !important;
+  }
 
   &::after {
     position: absolute;
