@@ -399,7 +399,7 @@ function switchPortfolioSlider(q) {
         keyboardControl: true,
         centeredSlides: true,
         mousewheelControl: true,
-        watchOverflow: false,
+        watchOverflow: true,
       
         navigation: {
           nextEl: '.swiper-button-next',
@@ -423,7 +423,7 @@ function switchPortfolioSlider(q) {
             centeredSlides: true,
             keyboardControl: true,
             mousewheelControl: true,
-            watchOverflow: false,
+            watchOverflow: true,
 
           
             navigation: {
@@ -439,10 +439,12 @@ function switchPortfolioSlider(q) {
 
 function openItem(j) {
   popup[j].classList.add('active');
+  popup[j].classList.remove('hidden');
 }
 
 function closeItem(j) {
   popup[j].classList.remove('active');
+  popup[j].classList.add('hidden');
 
 }
 
@@ -463,6 +465,7 @@ function delOverlay() {
   overlayPopup.style.width = 0;
   overlayPopup.style.height = 0;
 }
+
 
 //MENU MOBILE
 let navMain = document.querySelector('.main-nav');
@@ -509,7 +512,6 @@ window.addEventListener('resize', function (evt) {
 window.addEventListener('scroll', function (evt) {
   GetSnadowMenu();
 })
-
 
 
 //MENU FIXED
