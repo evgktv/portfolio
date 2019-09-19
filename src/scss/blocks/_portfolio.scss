@@ -43,7 +43,7 @@
   width: 100%;
   height: auto;
 
-  transition: all 1s ease-out;
+  transition: transform 1s ease-out;
 }
 
 .portfolio__item-wrapper {
@@ -55,6 +55,14 @@
   box-sizing: border-box;
   overflow: hidden;
   opacity: 0.2;
+}
+
+.portfolio__slider-item:active .portfolio__item-image {
+  -khtml-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .portfolio__item-description {
@@ -266,22 +274,20 @@
     border-color: lighten($blue, 20%);
   }
 
-  .active {
-    display: block;
-  }
-
-  .hidden {
-    display: none;
-  }
-
   &.hidden {
-    .active {
+    span:first-child {
       display: none;
     }
-
-    .hidden {
+    span:last-child {
       display: block;
     }
+  }
+
+  span:first-child {
+    display: block;
+  }
+  span:last-child {
+    display: none;
   }
 }
 

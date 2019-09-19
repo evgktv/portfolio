@@ -2,7 +2,13 @@
   position: relative;
   width: 100%;
   padding: rem(60px) 0;
-  background-image: url("../img/bg-bw1.jpg");
+  // background-image: url("../img/bg-bw1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  // background: linear-gradient(to top right, $orange, $blue);
+  background: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .8)), url("../img/bg-bw1.jpg"); 
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

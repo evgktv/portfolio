@@ -1,21 +1,30 @@
 .portfolio-info__item {
+  // display: block;
+  position: fixed;
+
   visibility: hidden;
   opacity: 0;
 
   width: 0;
-  // height: 0;
+  height: 0;
 
   top: 5%;
-  background: $bg-grey;
   z-index: 4400;
   overflow-y: auto;
-  transform: scale(0);
-  transition: transform 800ms;
-  pointer-events: auto;
 
-  &.hidden {
-      height: 0;
-  }
+  pointer-events: auto;
+  border-radius: rem(3px);
+  backface-visibility: hidden;
+
+
+  background: linear-gradient(to top right, #ccc, #fff);
+
+  transform: scale(0.0);
+  transition: transform 0.6s cubic-bezier(.55,0,.1,1);
+
+  // &.hidden {
+  //     height: 0;
+  // }
 
   &.active {
     position: fixed;
@@ -23,7 +32,7 @@
     visibility: visible;
     left: 5%;
     width: 90%;
-    max-height: 90%;
+    height: 90%;
     transform: scale(1);
 
     @media (min-width: $tablet) {
@@ -33,7 +42,6 @@
     @media (min-width: $desktop) {
       left: 10%;
       width: 80%;
-      min-height: 90%;
     }
   }
 }
