@@ -272,6 +272,11 @@ let oldItem;
 portfolioAll.addEventListener("click", function (event) {
   event.preventDefault();
 
+  if (portfolioAll.classList.contains('hidden')) {
+    portfolioAll.classList.remove('hidden');
+  } else {
+    portfolioAll.classList.add('hidden');
+  }
   if (portfolioAllBlock.classList.contains('portfolio__all-block')) {
     portfolioAllBlock.classList.remove('portfolio__all-block');
     portfolioAllBlock.classList.remove('main__wrapper');
@@ -419,6 +424,7 @@ function switchPortfolioSlider(q) {
           oldItem = r;
           sliderPortfolioInfo = new Swiper(".portfolio-info__slider", {
             spaceBetween: 30,
+
             autoHeight: true,
             centeredSlides: true,
             keyboardControl: true,
@@ -438,6 +444,7 @@ function switchPortfolioSlider(q) {
 }
 
 function openItem(j) {
+  document.body.classList.add('hidden');
   popup[j].classList.add('active');
   popup[j].classList.remove('hidden');
 }
@@ -445,25 +452,16 @@ function openItem(j) {
 function closeItem(j) {
   popup[j].classList.remove('active');
   popup[j].classList.add('hidden');
+  document.body.classList.remove('hidden');
 
 }
 
 function addOverlay() {
-  overlayPopup.style.position = 'fixed';
-  overlayPopup.style.top = 0;
-  overlayPopup.style.left = 0;
-  overlayPopup.style.opacity = 0.8;
-  overlayPopup.style.visibility = 'visible';
-  overlayPopup.style.width = '100%';
-  overlayPopup.style.height = '100%';
+  overlayPopup.classList.add('active');
 }
 
 function delOverlay() {
-  overlayPopup.style.position = 'relative';
-  overlayPopup.style.opacity = 0;
-  overlayPopup.style.visibility = 'hidden';
-  overlayPopup.style.width = 0;
-  overlayPopup.style.height = 0;
+  overlayPopup.classList.remove('active');
 }
 
 

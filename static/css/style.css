@@ -668,17 +668,29 @@ img {
 }
 
 .modal-overlay {
-  visibility: hidden;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  cursor: pointer;
-  -webkit-transition: opacity 250ms;
-  -o-transition: opacity 250ms;
-  transition: opacity 250ms;
-  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 4000;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.hidden {
+  overflow: hidden;
 }
 
 .header {
@@ -1541,7 +1553,12 @@ img {
   position: relative;
   width: 100%;
   padding: 3.75rem 0;
-  background-image: url("../img/bg-bw1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background: -o-linear-gradient(45deg, rgba(103, 0, 31, 0.8), rgba(34, 101, 163, 0.8)), url("../img/bg-bw1.jpg");
+  background: linear-gradient(45deg, rgba(103, 0, 31, 0.8), rgba(34, 101, 163, 0.8)), url("../img/bg-bw1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1989,9 +2006,11 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  -webkit-transition: all 1s ease-out;
-  -o-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: -webkit-transform 1s ease-out;
+  transition: -webkit-transform 1s ease-out;
+  -o-transition: transform 1s ease-out;
+  transition: transform 1s ease-out;
+  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
 }
 
 .portfolio__item-wrapper {
@@ -2006,6 +2025,14 @@ img {
           box-sizing: border-box;
   overflow: hidden;
   opacity: 0.2;
+}
+
+.portfolio__slider-item:active .portfolio__item-image {
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
 }
 
 .portfolio__item-description {
@@ -2223,20 +2250,20 @@ img {
   border-color: #97aadb;
 }
 
-.portfolio__all .active {
-  display: block;
-}
-
-.portfolio__all .hidden {
+.portfolio__all.hidden span:first-child {
   display: none;
 }
 
-.portfolio__all.hidden .active {
-  display: none;
+.portfolio__all.hidden span:last-child {
+  display: block;
 }
 
-.portfolio__all.hidden .hidden {
+.portfolio__all span:first-child {
   display: block;
+}
+
+.portfolio__all span:last-child {
+  display: none;
 }
 
 .portfolio__all-block {
@@ -2346,26 +2373,29 @@ img {
 }
 
 .portfolio-info__item {
+  position: fixed;
   visibility: hidden;
   opacity: 0;
   width: 0;
+  height: 0;
   top: 5%;
-  background: #eee;
   z-index: 4400;
   overflow-y: auto;
+  pointer-events: auto;
+  border-radius: 0.1875rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: -webkit-gradient(linear, left bottom, right top, from(#ccc), to(#fff));
+  background: -o-linear-gradient(bottom left, #ccc, #fff);
+  background: linear-gradient(to top right, #ccc, #fff);
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: -webkit-transform 800ms;
-  transition: -webkit-transform 800ms;
-  -o-transition: transform 800ms;
-  transition: transform 800ms;
-  transition: transform 800ms, -webkit-transform 800ms;
-  pointer-events: auto;
-}
-
-.portfolio-info__item.hidden {
-  height: 0;
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  -o-transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: transform 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .portfolio-info__item.active {
@@ -2374,7 +2404,7 @@ img {
   visibility: visible;
   left: 5%;
   width: 90%;
-  max-height: 90%;
+  height: 90%;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -2384,7 +2414,6 @@ img {
   .portfolio-info__item.active {
     left: 10%;
     width: 80%;
-    min-height: 90%;
   }
 }
 
