@@ -94,7 +94,8 @@
 /***/ (function(module, exports) {
 
 AOS.init({
-  once: false,
+  once: true,
+  offset: 80,
   delay: 30,
   duration: 700
 });
