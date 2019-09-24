@@ -106,10 +106,10 @@ const sliderWork = new Swiper(".work__slider", {
   keyboardControl: true,
   mousewheelControl: true,
   speed: 1200,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: true
+  // },
 
   pagination: {
     el: '.work__slider-pagination',
