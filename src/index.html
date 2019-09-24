@@ -122,10 +122,13 @@
         <div class="about-me__descr">
 
           <div class="about-me__photo" data-aos="fade-up">
-            <picture>
-              <source srcset="static/img/foto.webp" type="image/webp">
-              <source srcset="static/img/foto.jpg" type="image/jpeg">
-              <img src="static/img/foto.jpg" alt="my photo">
+            <picture class = "lazy">
+              <source data-srcset="static/img/foto.webp" type="image/webp">
+              <source data-srcset="static/img/foto.jpg" type="image/jpeg">
+                <img   data-srcset = "static/img/foto.jpg"  
+                data-src = "static/img/foto.jpg" src="static/img/foto.jpg" alt="my photo">
+
+              <!-- <img src="static/img/foto.jpg" alt="my photo"> -->
             </picture>
             <!-- <img src="static/img/foto.webp" width="150" height="150" alt="my photo"> -->
           </div>
@@ -1251,7 +1254,7 @@
 
 <div class="modal-overlay"></div>
 
-
+<!-- 
 <ul class="portfolio-info">
   <li class="portfolio-info__item hidden">
     <button class="portfolio-info__close"></button>
@@ -2260,7 +2263,7 @@
       </div>
     </div>
   </li>
-</ul>
+</ul> -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>

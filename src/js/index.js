@@ -1,3 +1,45 @@
+ document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("picture.lazy"); 
+
+  var lazyloadThrottleTimeout;
+  let aaa = document.querySelector(".about-me__descr");
+
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        lazyloadImages.forEach(function(picture , i) {
+          var qq = lazyloadImages[i].getElementsByTagName('source');
+
+          // qq.forEach(function(qqq) {
+            // console.log(qq[1])
+            console.log(qq[1].dataset)
+            qq[1].dataset = qq[1].dataset.srcset
+            console.log(qq[1].dataset)
+
+            // qq.srcset = qq.dataset.srcset;
+            // qq.src = qq.dataset.src;
+
+          // picture.classList.remove('lazy');
+
+              // console.log('aaa');
+              // console.log(lazyloadImages);
+              // console.log(picture);
+          // });
+        });
+        if(lazyloadImages.length == 0) { 
+          aaa.removeEventListener("scroll", lazyload);
+
+        }
+    }, 20);
+  }
+  
+  aaa.addEventListener("click", lazyload);
+});
+
+
 AOS.init({
   once: true,
   offset: 80,
@@ -457,48 +499,48 @@ if (scrollDown) {
 }
 
 // LANG
-let langEng = document.querySelector('.header__lang--eng');
-let langRus = document.querySelector('.header__lang--rus');
-let langNl = document.querySelector('.header__lang--nl');
+// let langEng = document.querySelector('.header__lang--eng');
+// let langRus = document.querySelector('.header__lang--rus');
+// let langNl = document.querySelector('.header__lang--nl');
 
-let langActive = document.querySelector('.header__lang--active');
-let textRus = document.querySelectorAll('.text--rus');
-let textEng = document.querySelectorAll('.text--eng');
-let textNl = document.querySelectorAll('.text--nl');
+// let langActive = document.querySelector('.header__lang--active');
+// let textRus = document.querySelectorAll('.text--rus');
+// let textEng = document.querySelectorAll('.text--eng');
+// let textNl = document.querySelectorAll('.text--nl');
 
-let zzz;
+// let zzz;
 
-changeLang(langEng, textEng);
-changeLang(langRus, textRus);
-changeLang(langNl, textNl);
+// changeLang(langEng, textEng);
+// changeLang(langRus, textRus);
+// changeLang(langNl, textNl);
 
-function changeLang(langXX, newLang) {
+// function changeLang(langXX, newLang) {
 
-  langXX.addEventListener("click", function (event) {
+//   langXX.addEventListener("click", function (event) {
 
-    // event.preventDefault();
+//     // event.preventDefault();
 
-    if (langXX.classList.contains('header__lang--active')) {
-      return;
-    } else {
-      let textLang = document.querySelectorAll('.text');
+//     if (langXX.classList.contains('header__lang--active')) {
+//       return;
+//     } else {
+//       let textLang = document.querySelectorAll('.text');
 
-      langActive.classList.remove('header__lang--active');
-      langXX.classList.add('header__lang--active');
-      langActive = langXX;
+//       langActive.classList.remove('header__lang--active');
+//       langXX.classList.add('header__lang--active');
+//       langActive = langXX;
 
 
-      textLang.forEach(function (value, index, arr) {
-        if (arr[index].classList.contains('text--hidden')) {
-          return;
-        } else {
-          arr[index].classList.add('text--hidden');
-        }
-      });
+//       textLang.forEach(function (value, index, arr) {
+//         if (arr[index].classList.contains('text--hidden')) {
+//           return;
+//         } else {
+//           arr[index].classList.add('text--hidden');
+//         }
+//       });
 
-      newLang.forEach(function (value, index, arr) {
-        arr[index].classList.remove('text--hidden');
-      });
-    }
-  });
-}
+//       newLang.forEach(function (value, index, arr) {
+//         arr[index].classList.remove('text--hidden');
+//       });
+//     }
+//   });
+// }
