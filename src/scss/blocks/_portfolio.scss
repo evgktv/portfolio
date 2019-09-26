@@ -56,6 +56,9 @@
   overflow: hidden;
   opacity: 0.2;
 }
+.portfolio__slider-item:hover .portfolio__item-image-mask {
+  background-color: #222;
+}
 
 .portfolio__slider-item:active .portfolio__item-image {
   -khtml-user-select: none;
@@ -146,10 +149,6 @@
   @media (min-width: $tablet) {
     display: block;
   }
-}
-
-.portfolio__item-image-mask {
-  background-color: #222222;
 }
 
 .portfolio__slider {

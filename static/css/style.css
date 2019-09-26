@@ -460,6 +460,7 @@ template {
 /* <= 960px */
 @font-face {
   font-family: 'RobotoItalic';
+  font-display: auto;
   src: url("../fonts/Roboto-Italic.eot");
   src: url("../fonts/Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto-Italic.ttf") format("truetype");
   font-weight: normal;
@@ -468,6 +469,7 @@ template {
 
 @font-face {
   font-family: 'RobotoBold';
+  font-display: auto;
   src: url("../fonts/Roboto-Bold.eot");
   src: url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: normal;
@@ -476,6 +478,7 @@ template {
 
 @font-face {
   font-family: 'Roboto';
+  font-display: auto;
   src: url("../fonts/Roboto-Regular.eot");
   src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -484,6 +487,7 @@ template {
 
 @font-face {
   font-family: 'Lobster';
+  font-display: auto;
   src: url("../fonts/Lobster.eot");
   src: url("../fonts/Lobster.eot?#iefix") format("embedded-opentype"), url("../fonts/Lobster.woff") format("woff"), url("../fonts/Lobster.ttf") format("truetype");
   font-weight: normal;
@@ -842,6 +846,7 @@ body.hidden {
   border: 2px solid #fff;
   border-radius: 50%;
   z-index: 20;
+  opacity: 1;
   outline: none;
   -webkit-transition-property: opacity;
   -o-transition-property: opacity;
@@ -849,6 +854,21 @@ body.hidden {
   -webkit-transition-duration: 0.6s;
        -o-transition-duration: 0.6s;
           transition-duration: 0.6s;
+  background-color: transparent;
+}
+
+.header__scroll.hidden {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.header__scroll.hidden a {
+  pointer-events: none;
+  cursor: default;
+}
+
+.header__scroll:focus, .header__scroll:active {
+  background-color: transparent;
 }
 
 .header__scroll:hover {
@@ -863,6 +883,8 @@ body.hidden {
   height: inherit;
   width: inherit;
   border-radius: 50%;
+  pointer-events: all;
+  cursor: pointer;
 }
 
 .header__scroll-down {
@@ -1465,6 +1487,11 @@ body.hidden {
   padding-left: 0.5rem;
 }
 
+.work__slider .work__slider-pagination .swiper-pagination-bullet:focus, .work__slider .work__slider-pagination .swiper-pagination-bullet:active {
+  outline: none;
+  border: none;
+}
+
 @media (min-width: 768px) {
   .work__slider .work__slider-pagination .swiper-pagination-bullet {
     width: -webkit-calc(20% - 1.8125rem);
@@ -2058,6 +2085,10 @@ body.hidden {
   opacity: 0.2;
 }
 
+.portfolio__slider-item:hover .portfolio__item-image-mask {
+  background-color: #222;
+}
+
 .portfolio__slider-item:active .portfolio__item-image {
   -o-user-select: none;
   -moz-user-select: none;
@@ -2153,10 +2184,6 @@ body.hidden {
   .portfolio__item-info {
     display: block;
   }
-}
-
-.portfolio__item-image-mask {
-  background-color: #222222;
 }
 
 .portfolio__slider {
@@ -2455,6 +2482,12 @@ body.hidden {
   right: 0.875rem;
   width: 20px;
   height: 20px;
+}
+
+@media (min-width: 768px) {
+  .portfolio-info__close {
+    right: 1.25rem;
+  }
 }
 
 .portfolio-info__close::after, .portfolio-info__close::before {
@@ -2784,9 +2817,9 @@ body.hidden {
   height: 0.125rem;
   right: 0;
   bottom: 0;
-  background: -webkit-gradient(linear, left top, right top, from(#4b6cc1), to(#fff));
-  background: -o-linear-gradient(left, #4b6cc1, #fff);
-  background: linear-gradient(to right, #4b6cc1, #fff);
+  background: -webkit-gradient(linear, left top, right top, from(#4b6cc1), to(#eee));
+  background: -o-linear-gradient(left, #4b6cc1, #eee);
+  background: linear-gradient(to right, #4b6cc1, #eee);
 }
 
 .portfolio-info__info ul {

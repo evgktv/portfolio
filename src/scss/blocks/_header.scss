@@ -152,10 +152,27 @@
   border-radius: 50%;
 
   z-index: 20;
+  opacity: 1;
 
   outline: none;
   transition-property: opacity;
   transition-duration: 0.6s;
+  background-color: transparent;
+
+  &.hidden {
+    opacity: 0 !important;
+    pointer-events: none;
+    
+    a {
+      pointer-events: none;
+      cursor: default;
+    }
+  }
+
+  &:focus,
+  &:active  {
+    background-color: transparent;
+  }
 
   &:hover {
     background-color: $blue;
@@ -167,6 +184,8 @@
     height: inherit;
     width: inherit;
     border-radius: 50%;
+    pointer-events: all;
+    cursor: pointer;
   }
 }
 
@@ -181,8 +200,8 @@
     border-bottom: rem(2px) solid #fff;
 
     transform: rotate(45deg);
-    z-index: 30;
 
+    z-index: 30;
 
     animation-name: scroll-drop;
     animation-duration: 1.2s;

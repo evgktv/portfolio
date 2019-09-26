@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,400i,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/css/swiper.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="static/css/style.css?t=1569341663817" />
+  <link rel="stylesheet" href="static/css/style.css?t=1569500949916" />
 
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&display=swap&subset=cyrillic" rel="stylesheet"> -->
 
@@ -58,11 +58,7 @@
   <main>
     <nav id="menuID" class="main-nav main-nav--closed main-nav--nojs">
       <div class="main__wrapper main-nav__wrapper">
-        <!-- <div class="main-nav__logo anchor-scroll">
-          <a class="text text--rus" href="#start">Евгений Котляров</a>
-          <a class="text text--eng text--hidden" href="#start">Evgeny Kotlyarov</a>
-          <a class="text text--nl text--hidden" href="#start">Evgeny Kotlyarov</a>
-        </div> -->
+
         <button class="main-nav__toggle" type="button">Открыть меню</button>
 
         <ul class="main-nav__list">
@@ -122,15 +118,13 @@
         <div class="about-me__descr">
 
           <div class="about-me__photo" data-aos="fade-up">
-            <picture class = "lazy">
-              <source data-srcset="static/img/foto.webp" type="image/webp">
-              <source data-srcset="static/img/foto.jpg" type="image/jpeg">
-                <img   data-srcset = "static/img/foto.jpg"  
-                data-src = "static/img/foto.jpg" src="static/img/foto.jpg" alt="my photo">
+                          <!-- <img class="lazy" data-src="static/img/foto.png" alt="my photo"> -->
 
-              <!-- <img src="static/img/foto.jpg" alt="my photo"> -->
+            <picture>
+              <source srcset="static/img/foto.webp" type="image/webp">
+              <source srcset="static/img/foto.png" type="image/jpeg">
+              <img  src = "static/img/foto.png" alt="my photo">
             </picture>
-            <!-- <img src="static/img/foto.webp" width="150" height="150" alt="my photo"> -->
           </div>
           <div class="about-me__text-box text text--rus">
             <p class="about-me__info" data-aos="fade-up">Приветствую Вас на своем сайте-портфолио!<br>
@@ -416,7 +410,7 @@
                       <picture>
                         <source srcset="static/img/portfolio/health/health-main.webp" type="image/webp">
                         <source srcset="static/img/portfolio/health/health-main.jpg" type="image/jpeg">
-                        <img class="portfolio__item-image" src="static/img/portfolio/new.jpg" alt="Site Health">
+                        <img class="portfolio__item-image" src="static/img/portfolio/health/health-main.jpg" alt="Site Health">
                       </picture>
                     </div>
                   </div>
@@ -1370,7 +1364,7 @@
 
 <div class="modal-overlay"></div>
 
-<!-- 
+
 <ul class="portfolio-info">
   <li class="portfolio-info__item hidden">
     <button class="portfolio-info__close"></button>
@@ -1401,11 +1395,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                  <picture>
-                    <source srcset="static/img/portfolio/health/health.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/health/health.jpg" type="image/jpeg">
-                    <img class="swiper-slide portfolio-info__slider-item portfolio__item-image"
-                      src="static/img/portfolio/health/health.jpg" alt="Health Desktop">
+                  <picture class = "lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/health/health.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/health/health.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/health/health.jpg" alt="Health Desktop">
                   </picture>
                 </div>
               </div>
@@ -1414,11 +1407,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                  <picture>
-                    <source srcset="static/img/portfolio/health/health-tab.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/health/health-tab.jpg" type="image/jpeg">
-                    <img class="swiper-slide portfolio-info__slider-item portfolio__item-image"
-                      src="static/img/portfolio/health/health-tab.jpg" alt="Health Tablet">
+                  <picture class = "lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/health/health-tab.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/health/health-tab.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/health/health-tab.jpg" alt="Health Tablet">
                   </picture>
                 </div>
               </div>
@@ -1427,11 +1419,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                  <picture>
-                    <source srcset="static/img/portfolio/health/health-mob.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/health/health-mob.jpg" type="image/jpeg">
-                    <img class="swiper-slide portfolio-info__slider-item portfolio__item-image"
-                      src="static/img/portfolio/health/health-mob.jpg" alt="Health Mobile">
+                  <picture class = "lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/health/health-mob.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/health/health-mob.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/health/health-mob.jpg" alt="Health Mobile">
                   </picture>
                 </div>
               </div>
@@ -1510,42 +1501,20 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-desk.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-desk.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-desk.jpg" alt="Borodinski Desktop">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-desk.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-desk.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-desk.jpg" alt="Borodinski Desktop">
                   </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-desk2.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-desk2.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-desk2.jpg" alt="Borodinski Desktop">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-desk2.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-desk2.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-desk2.jpg" alt="Borodinski Desktop">
                   </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-desk3.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-desk3.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-desk3.jpg" alt="Borodinski Desktop">
-                  </picture>
-                </div>
-              </div>
-            </div>
-
-            <div class="portfolio-info__img">
-              <div class="portfolio-info__slider">
-                <div class="portfolio-info__slider-wrapper">
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-tab.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-tab.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-tab.jpg" alt="Borodinski Tablet">
-                  </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-tab2.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-tab2.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-tab2.jpg" alt="Borodinski Tablet">
-                  </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-tab3.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-tab3.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-tab3.jpg" alt="Borodinski Tablet">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-desk3.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-desk3.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-desk3.jpg" alt="Borodinski Desktop">
                   </picture>
                 </div>
               </div>
@@ -1554,15 +1523,37 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-mob.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-mob.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-mob.jpg" alt="Borodinski Tablet">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-tab.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-tab.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-tab.jpg" alt="Borodinski Tablet">
                   </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/borodinski/borod-mob2.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/borodinski/borod-mob2.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/borodinski/borod-mob2.jpg" alt="Borodinski Mobile">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-tab2.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-tab2.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-tab2.jpg" alt="Borodinski Tablet">
+                  </picture>
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-tab3.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-tab3.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-tab3.jpg" alt="Borodinski Tablet">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-info__img">
+              <div class="portfolio-info__slider">
+                <div class="portfolio-info__slider-wrapper">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-mob.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-mob.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-mob.jpg" alt="Borodinski Tablet">
+                  </picture>
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-mob2.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/borodinski/borod-mob2.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/borodinski/borod-mob2.jpg" alt="Borodinski Mobile">
                   </picture>
                 </div>
               </div>
@@ -1640,42 +1631,20 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-desk.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-desk.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-desk.jpg" alt="Mishka Desktop">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-desk.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-desk.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-desk.jpg" alt="Mishka Desktop">
                   </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-desk2.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-desk2.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-desk2.jpg" alt="Mishka Desktop">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-desk2.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-desk2.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-desk2.jpg" alt="Mishka Desktop">
                   </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-desk3.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-desk3.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-desk3.jpg" alt="Mishka Desktop">
-                  </picture>
-                </div>
-              </div>
-            </div>
-
-            <div class="portfolio-info__img">
-              <div class="portfolio-info__slider">
-                <div class="portfolio-info__slider-wrapper">
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-tab.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-tab.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-tab.jpg" alt="Mishka Tablet">
-                  </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-tab2.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-tab2.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-tab2.jpg" alt="Mishka Tablet">
-                  </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-tab3.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-tab3.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-tab3.jpg" alt="Mishka Tablet">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-desk3.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-desk3.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-desk3.jpg" alt="Mishka Desktop">
                   </picture>
                 </div>
               </div>
@@ -1684,20 +1653,42 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-mob.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-mob.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-mob.jpg" alt="Mishka Mobile">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-tab.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-tab.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-tab.jpg" alt="Mishka Tablet">
                   </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-mob2.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-mob2.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-mob2.jpg" alt="Mishka Mobile">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-tab2.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-tab2.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-tab2.jpg" alt="Mishka Tablet">
                   </picture>
-                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                    <source srcset="static/img/portfolio/mishka/mishka-mob3.webp" type="image/webp">
-                    <source srcset="static/img/portfolio/mishka/mishka-mob3.jpg" type="image/jpeg">
-                    <img src="static/img/portfolio/mishka/mishka-mob3.jpg" alt="Mishka Mobile">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-tab3.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-tab3.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-tab3.jpg" alt="Mishka Tablet">
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio-info__img">
+              <div class="portfolio-info__slider">
+                <div class="portfolio-info__slider-wrapper">
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-mob.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-mob.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-mob.jpg" alt="Mishka Mobile">
+                  </picture>
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-mob2.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-mob2.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-mob2.jpg" alt="Mishka Mobile">
+                  </picture>
+                  <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-mob3.webp" type="image/webp">
+                    <source class="lazy-source" data-srcset="static/img/portfolio/mishka/mishka-mob3.jpg" type="image/jpeg">
+                    <img class="lazy-img" datasrc="static/img/portfolio/mishka/mishka-mob3.jpg" alt="Mishka Mobile">
                   </picture>
                 </div>
               </div>
@@ -1773,10 +1764,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/badminton/badminton-desk.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/badminton/badminton-desk.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/badminton/badminton-desk.jpg" alt="Badminton Desktop">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/badminton/badminton-desk.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/badminton/badminton-desk.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/badminton/badminton-desk.jpg" alt="Badminton Desktop">
                       </picture>
                 </div>
               </div>
@@ -1785,10 +1776,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/badminton/badminton-tab.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/badminton/badminton-tab.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/badminton/badminton-tab.jpg" alt="Badminton Tablet">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/badminton/badminton-tab.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/badminton/badminton-tab.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/badminton/badminton-tab.jpg" alt="Badminton Tablet">
                       </picture>
                 </div>
               </div>
@@ -1797,10 +1788,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/badminton/badminton-mob.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/badminton/badminton-mob.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/badminton/badminton-mob.jpg" alt="Badminton Mobile">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/badminton/badminton-mob.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/badminton/badminton-mob.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/badminton/badminton-mob.jpg" alt="Badminton Mobile">
                       </picture>
                 </div>
               </div>
@@ -1875,10 +1866,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                   <div class="portfolio-info__slider-wrapper">
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/psysovet/psysovet.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/psysovet/psysovet.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/psysovet/psysovet.jpg" alt="PsySovet Desktop">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/psysovet/psysovet.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/psysovet/psysovet.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/psysovet/psysovet.jpg" alt="PsySovet Desktop">
                         </picture>
                 </div>
               </div>
@@ -1887,10 +1878,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/psysovet/psysovet-tab.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/psysovet/psysovet-tab.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/psysovet/psysovet-tab.jpg" alt="PsySovet Tablet">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/psysovet/psysovet-tab.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/psysovet/psysovet-tab.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/psysovet/psysovet-tab.jpg" alt="PsySovet Tablet">
                       </picture>
                 </div>
               </div>
@@ -1899,10 +1890,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/psysovet/psysovet-mob.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/psysovet/psysovet-mob.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/psysovet/psysovet-mob.jpg" alt="PsySovet Mobile">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/psysovet/psysovet-mob.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/psysovet/psysovet-mob.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/psysovet/psysovet-mob.jpg" alt="PsySovet Mobile">
                       </picture>
                 </div>
               </div>
@@ -1978,10 +1969,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/apphub/apphub-desk.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/apphub/apphub-desk.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/apphub/apphub-desk.jpg" alt="AppHub Desktop">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/apphub/apphub-desk.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/apphub/apphub-desk.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/apphub/apphub-desk.jpg" alt="AppHub Desktop">
                       </picture>
                 </div>
               </div>
@@ -1990,10 +1981,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/apphub/apphub-tab.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/apphub/apphub-tab.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/apphub/apphub-tab.jpg" alt="AppHub Tablet">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/apphub/apphub-tab.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/apphub/apphub-tab.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/apphub/apphub-tab.jpg" alt="AppHub Tablet">
                       </picture>
                 </div>
               </div>
@@ -2002,10 +1993,10 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/apphub/apphub-mob.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/apphub/apphub-mob.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/apphub/apphub-mob.jpg" alt="AppHub Mobile">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/apphub/apphub-mob.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/apphub/apphub-mob.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/apphub/apphub-mob.jpg" alt="AppHub Mobile">
                       </picture>
                 </div>
               </div>
@@ -2081,15 +2072,15 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/pink/pink-desk.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/pink/pink-desk.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/pink/pink-desk.jpg" alt="Pink Desktop">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-desk.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-desk.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/pink/pink-desk.jpg" alt="Pink Desktop">
                       </picture>
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/pink/pink-desk2.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/pink/pink-desk2.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/pink/pink-desk2.jpg" alt="Pink Desktop">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-desk2.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-desk2.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/pink/pink-desk2.jpg" alt="Pink Desktop">
                         </picture>
                 </div>
               </div>
@@ -2098,15 +2089,15 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/pink/pink-tab.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/pink/pink-tab.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/pink/pink-tab.jpg" alt="Pink Tablet">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-tab.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-tab.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/pink/pink-tab.jpg" alt="Pink Tablet">
                       </picture>
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/pink/pink-tab2.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/pink/pink-tab2.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/pink/pink-tab2.jpg" alt="Pink Tablet">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-tab2.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-tab2.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/pink/pink-tab2.jpg" alt="Pink Tablet">
                         </picture>
                 </div>
               </div>
@@ -2115,15 +2106,15 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/pink/pink-mob.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/pink/pink-mob.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/pink/pink-mob.jpg" alt="Pink Mobile">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-mob.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-mob.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/pink/pink-mob.jpg" alt="Pink Mobile">
                       </picture>
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/pink/pink-mob2.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/pink/pink-mob2.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/pink/pink-mob2.jpg" alt="Pink Mobile">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-mob2.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/pink/pink-mob2.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/pink/pink-mob2.jpg" alt="Pink Mobile">
                         </picture>
                 </div>
               </div>
@@ -2200,20 +2191,20 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/sedona/sedona-desk.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/sedona/sedona-desk.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/sedona/sedona-desk.jpg" alt="Sedona Desktop">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-desk.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-desk.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-desk.jpg" alt="Sedona Desktop">
                       </picture>
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/sedona/sedona-desk2.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/sedona/sedona-desk2.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/sedona/sedona-desk2.jpg" alt="Sedona Desktop">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-desk2.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-desk2.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-desk2.jpg" alt="Sedona Desktop">
                         </picture>
-                        <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                            <source srcset="static/img/portfolio/sedona/sedona-desk3.webp" type="image/webp">
-                            <source srcset="static/img/portfolio/sedona/sedona-desk3.jpg" type="image/jpeg">
-                            <img src="static/img/portfolio/sedona/sedona-desk3.jpg" alt="Sedona Desktop">
+                        <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                            <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-desk3.webp" type="image/webp">
+                            <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-desk3.jpg" type="image/jpeg">
+                            <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-desk3.jpg" alt="Sedona Desktop">
                           </picture>
                 </div>
               </div>
@@ -2222,20 +2213,20 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/sedona/sedona-tab.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/sedona/sedona-tab.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/sedona/sedona-tab.jpg" alt="Sedona Tablet">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-tab.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-tab.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-tab.jpg" alt="Sedona Tablet">
                       </picture>
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/sedona/sedona-tab2.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/sedona/sedona-tab2.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/sedona/sedona-tab2.jpg" alt="Sedona Tablet">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-tab2.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-tab2.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-tab2.jpg" alt="Sedona Tablet">
                         </picture>
-                        <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                            <source srcset="static/img/portfolio/sedona/sedona-tab3.webp" type="image/webp">
-                            <source srcset="static/img/portfolio/sedona/sedona-tab3.jpg" type="image/jpeg">
-                            <img src="static/img/portfolio/sedona/sedona-tab3.jpg" alt="Sedona Tablet">
+                        <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                            <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-tab3.webp" type="image/webp">
+                            <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-tab3.jpg" type="image/jpeg">
+                            <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-tab3.jpg" alt="Sedona Tablet">
                           </picture>
                 </div>
               </div>
@@ -2244,20 +2235,20 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/sedona/sedona-mob.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/sedona/sedona-mob.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/sedona/sedona-mob.jpg" alt="Sedona Mobile">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-mob.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-mob.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-mob.jpg" alt="Sedona Mobile">
                       </picture>
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/sedona/sedona-mob2.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/sedona/sedona-mob2.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/sedona/sedona-mob2.jpg" alt="Sedona Mobile">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-mob2.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-mob2.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-mob2.jpg" alt="Sedona Mobile">
                         </picture>
-                        <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                            <source srcset="static/img/portfolio/sedona/sedona-mob3.webp" type="image/webp">
-                            <source srcset="static/img/portfolio/sedona/sedona-mob3.jpg" type="image/jpeg">
-                            <img src="static/img/portfolio/sedona/sedona-mob3.jpg" alt="Sedona Mobile">
+                        <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                            <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-mob3.webp" type="image/webp">
+                            <source class="lazy-source" data-srcset="static/img/portfolio/sedona/sedona-mob3.jpg" type="image/jpeg">
+                            <img class="lazy-img" datasrc="static/img/portfolio/sedona/sedona-mob3.jpg" alt="Sedona Mobile">
                           </picture>
                 </div>
               </div>
@@ -2326,15 +2317,15 @@
             <div class="portfolio-info__img">
               <div class="portfolio-info__slider">
                 <div class="portfolio-info__slider-wrapper">
-                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                        <source srcset="static/img/portfolio/glaccy/glaccy-desk.webp" type="image/webp">
-                        <source srcset="static/img/portfolio/glaccy/glaccy-desk.jpg" type="image/jpeg">
-                        <img src="static/img/portfolio/glaccy/glaccy-desk.jpg" alt="Glaccy Desktop">
+                    <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/glaccy/glaccy-desk.webp" type="image/webp">
+                        <source class="lazy-source" data-srcset="static/img/portfolio/glaccy/glaccy-desk.jpg" type="image/jpeg">
+                        <img class="lazy-img" datasrc="static/img/portfolio/glaccy/glaccy-desk.jpg" alt="Glaccy Desktop">
                       </picture>
-                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image">
-                          <source srcset="static/img/portfolio/glaccy/glaccy-desk2.webp" type="image/webp">
-                          <source srcset="static/img/portfolio/glaccy/glaccy-desk2.jpg" type="image/jpeg">
-                          <img src="static/img/portfolio/glaccy/glaccy-desk2.jpg" alt="Glaccy Desktop">
+                      <picture class="swiper-slide portfolio-info__slider-item portfolio__item-image lazy">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/glaccy/glaccy-desk2.webp" type="image/webp">
+                          <source class="lazy-source" data-srcset="static/img/portfolio/glaccy/glaccy-desk2.jpg" type="image/jpeg">
+                          <img class="lazy-img" datasrc="static/img/portfolio/glaccy/glaccy-desk2.jpg" alt="Glaccy Desktop">
                         </picture>
                 </div>
               </div>
@@ -2379,11 +2370,11 @@
       </div>
     </div>
   </li>
-</ul> -->
+</ul>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/js/swiper.js"></script>
-<script src="static/js/script.js?t=1569341663817"></script>
+<script src="static/js/script.js?t=1569500949916"></script>
 
 </html>

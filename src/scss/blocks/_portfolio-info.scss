@@ -56,6 +56,10 @@
   width: 20px;
   height: 20px;
 
+  @media (min-width: $tablet) {
+    right: rem(20px);
+  }
+
   &::after,
   &::before {
     position: absolute;
@@ -240,10 +244,6 @@
   perspective: 700px;
 }
 
-.portfolio-info__slider-item.swiper-slide {
-// width: 50% !important;
-}
-
 .portfolio-info__img {
   display: none;
   width: 90%;
@@ -362,7 +362,7 @@
     height: rem(2px);
     right: 0;
     bottom: 0;
-    background: linear-gradient(to right, $blue, #fff);
+    background: linear-gradient(to right, $blue, $bg-grey);
   }
 
   ul {
