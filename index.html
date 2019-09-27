@@ -14,13 +14,66 @@
   <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,400i,700,800" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/css/swiper.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-  <link rel="stylesheet" href="static/css/style.css?t=1569500949916" />
+  <link rel="stylesheet" href="static/css/style.css?t=1569565859198" />
 
   <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,700i&display=swap&subset=cyrillic" rel="stylesheet"> -->
 
 </head>
 
 <body>
+    <div id="preloader">
+      <div>
+          Подождите, идет загрузка сайта ...
+
+        </div>
+      
+      </div>
+      
+      <style type="text/css">
+        #preloader {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 1);
+          z-index: 9999;
+        }
+      
+        #preloader div {
+          background: #fff;
+          width: 260px;
+          height: 40px;
+          line-height: 40px;
+          border-radius: 8px;
+          font-family: arial;
+          font-size: 15px;
+          color: #111;
+          text-align: center;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+          position: fixed;
+          z-index: 999;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto
+        }
+      </style>
+      
+      <script type="text/javascript">
+      
+        window.onload = function() {
+      
+          setTimeout(function() {
+      
+            document.getElementById("preloader").style.display = "none";
+      
+          }, 400);
+      
+        };
+      
+      </script>
   <a id="start" name="start"></a>
 
   <a id="rus"></a>
@@ -2375,6 +2428,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/js/swiper.js"></script>
-<script src="static/js/script.js?t=1569500949916"></script>
+<script src="static/js/script.js?t=1569565859198"></script>
 
 </html>

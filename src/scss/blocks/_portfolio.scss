@@ -242,19 +242,33 @@
 }
 
 .portfolio__all {
+  position: relative;
+  overflow: hidden;
+
   margin: 0 auto;
   margin-top: rem(32px);
   width: rem(142px);
-  height: rem(32px);
+  height: rem(40px);
 
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $orange;
 
-  border: rem(2px) solid $blue;
+  color: $blue;
+  border: rem(2px) solid $orange;
+  border-radius: rem(8px);
+  transition: .2s ease-in-out;
 
-  border-radius: rem(24px);
+  &::before {
+    content: "";
+    background: linear-gradient(90deg, rgba(75, 108, 193,.1), rgba(75, 108, 193,.5));
+    height: rem(50px);
+    width: rem(50px);
+    position: absolute;
+    top: rem(-8px);
+    left: rem(-75px);
+    transform: skewX(-45deg);
+  }
 
   @media (min-width: $tablet) {
     width: rem(148px);
@@ -262,8 +276,21 @@
     margin-top: rem(24px);
   }
 
+  @media (min-width: $desktop) {
+    width: rem(160px);
+    height: rem(48px);
+    margin-top: rem(40px);
+  }
+
   &:hover {
-    color: lighten($orange, 20%);
+    // color: lighten($orange, 20%);
+    background: $orange;
+    color: #fff;
+
+    &:before {
+      left: rem(240px);
+      transition: .5s ease-in-out;
+    }
   }
 
   &:active {

@@ -273,6 +273,10 @@
   }
 }
 
+.portfolio-info__slider-wrapper.swiper-wrapper {
+  height: auto !important;
+}
+
 .portfolio-info__slider-prev,
 .portfolio-info__slider-next {
   position: absolute !important;
@@ -397,13 +401,60 @@
 }
 
 .portfolio-info__link {
+  position: relative;
+  overflow: hidden;
+
   margin-top: rem(32px);
   margin-bottom: rem(32px);
+  width: rem(128px);
+  height: rem(32px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $blue;
+  border: rem(2px) solid $orange;
+  border-radius: rem(8px);
+  transition: .2s ease-in-out;
+
+  &::before {
+    content: "";
+    background: linear-gradient(90deg, rgba(75, 108, 193,.1), rgba(75, 108, 193,.5));
+    height: rem(50px);
+    width: rem(50px);
+    position: absolute;
+    top: rem(-8px);
+    left: rem(-75px);
+    transform: skewX(-45deg);
+  }
 
   @media (min-width: $tablet) {
 
+    width: rem(132px);
+    height: rem(36px);
+
     margin-top: rem(32px);
     margin-bottom: rem(40px);
+}
+
+@media (min-width: $desktop) {
+
+  width: rem(140px);
+  height: rem(40px);
+}
+&:hover {
+  background: $orange;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+
+  &:before {
+    left: rem(240px);
+    transition: .5s ease-in-out;
+  }
 }
 
 @media (min-width: $desktop) {
@@ -413,20 +464,11 @@
 }
 
   a {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: rem(150px);
-    height: rem(48px);
-    color: $main-txt;
-
-    border: rem(2px) solid $blue;
-
-    border-radius: rem(24px);
-
-    &:hover {
-      color: $orange;
-    }
+    color: $blue;
 
     &:active {
       border-color: lighten($blue, 20%);

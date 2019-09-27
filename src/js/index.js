@@ -68,9 +68,6 @@ const sliderWork = new Swiper(".work__slider", {
     },
   });
 
-
-
-
 let portfolioAllBlock = document.querySelector(".portfolio__all-main");
 
 let portfolioSl = document.querySelector(".portfolio__slider");
@@ -186,23 +183,25 @@ function openItemPort (item, q) {
       
       if (item.classList.contains('portfolio__slider-item--new') == true) {
         $("html,body").animate({
-          scrollTop: $('a[name="contact"]').offset().top
+          scrollTop: $('a[name="contact"]').offset().top - 30
         }, 700);
       } 
         else {
           if (popup[i-1].classList.contains('reopen') == false) {
+
             let lazyloadImages = popup[i-1].querySelectorAll("picture.lazy");
+            let imagePortfolioInfoMain = lazyloadImages[0].querySelector(".lazy-img");
+            
+            imagePortfolioInfoMain.setAttribute('src', imagePortfolioInfoMain.getAttribute('datasrc'));
+
             lazyloadImages.forEach(function(item, i) {
               let imagePortfolioInfo = item.querySelectorAll('.lazy-source');
-              let imagePortfolioInfoMain = item.querySelector(".lazy-img");
-
-              imagePortfolioInfoMain.setAttribute('src', imagePortfolioInfoMain.getAttribute('datasrc'));
               imagePortfolioInfo.forEach(function(item, x) {
               item.setAttribute('srcset', item.getAttribute('data-srcset'));
               })
             })
           }
-          
+
           addOverlay();
         
           openItem(i-1);  
@@ -371,7 +370,7 @@ function ListnerMenuItem() {
 
   navMain.classList.add('main-nav--closed');
   navToggle.classList.remove('close');
-  navMain.style.boxShadow = 'none';
+  // navMain.style.boxShadow = 'none';
 }
 
 function ListenerMenu() {
@@ -418,7 +417,11 @@ function ScrollAnchor() {
       const a = $('a[name="' + name.substr(1) + '"]');
 
       if (window.innerWidth > 767) {
-        top = a.offset().top - 30;
+        if (window.innerWidth > 960) {
+          top = a.offset().top - 30;
+        } else {
+          top = a.offset().top - 80;
+        }
       } else {
         top = a.offset().top - 312;
       }
