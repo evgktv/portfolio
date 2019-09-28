@@ -74,6 +74,34 @@ let portfolioSl = document.querySelector(".portfolio__slider");
 let item = portfolioSl.querySelectorAll(".portfolio__slider-item");
   
 let portfolioAllList = document.querySelector(".portfolio__all-list");
+let portfolioPreImg = portfolioAllList.querySelectorAll("picture.lazy")
+
+let lazyloadThrottleTimeout;
+
+function lazyload () {
+  if(lazyloadThrottleTimeout) {
+    clearTimeout(lazyloadThrottleTimeout);
+  }    
+  
+  lazyloadThrottleTimeout = setTimeout(function() {
+
+          portfolioPreImg.forEach(function(item, i) {
+            let imagePortfolioImg = item.querySelectorAll('.lazy-source');
+            imagePortfolioImg.forEach(function(item, x) {
+            item.setAttribute('srcset', item.getAttribute('data-srcset'));
+            item.classList.remove('lazy');
+            })
+          })
+        document.removeEventListener("scroll", lazyload);
+        window.removeEventListener("resize", lazyload);
+        window.removeEventListener("orientationChange", lazyload);
+  }, 20);
+}
+
+document.addEventListener("scroll", lazyload);
+window.addEventListener("resize", lazyload);
+window.addEventListener("orientationChange", lazyload);
+
 
 let popup = document.querySelectorAll(".portfolio-info__item");
 
@@ -196,12 +224,8 @@ function openItemPort (item, q) {
             
             imagePortfolioInfoMain.setAttribute('src', imagePortfolioInfoMain.getAttribute('datasrc'));
 
-            lazyloadImages.forEach(function(item, i) {
-              let imagePortfolioInfo = item.querySelectorAll('.lazy-source');
-              imagePortfolioInfo.forEach(function(item, x) {
-              item.setAttribute('srcset', item.getAttribute('data-srcset'));
-              })
-            })
+            lazyImg(lazyloadImages);
+
             imagePortfolioInfoMain.onload = function() {
         
               setTimeout(function() {
@@ -316,6 +340,15 @@ function openItemPort (item, q) {
           }
       }
     }
+  })
+}
+
+function lazyImg(lazyloadImages) {
+  lazyloadImages.forEach(function(item, i) {
+    let imagePortfolioInfo = item.querySelectorAll('.lazy-source');
+    imagePortfolioInfo.forEach(function(item, x) {
+    item.setAttribute('srcset', item.getAttribute('data-srcset'));
+    })
   })
 }
 
