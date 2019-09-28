@@ -1,7 +1,7 @@
 .footer {
   position: relative;
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0;
 
   background-color: $blue;
 
@@ -35,6 +35,10 @@
       display: block;
       color: #ccc;
       font-size: rem(12px);
+
+      @media (min-width: $tablet) {
+        font-size: rem(14px);
+      } 
 
       &:hover {
         color: #eee;

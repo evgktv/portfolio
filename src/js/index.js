@@ -187,6 +187,8 @@ function openItemPort (item, q) {
         }, 700);
       } 
         else {
+          addOverlay();
+
           if (popup[i-1].classList.contains('reopen') == false) {
 
             let lazyloadImages = popup[i-1].querySelectorAll("picture.lazy");
@@ -200,13 +202,16 @@ function openItemPort (item, q) {
               item.setAttribute('srcset', item.getAttribute('data-srcset'));
               })
             })
+            imagePortfolioInfoMain.onload = function() {
+        
+              setTimeout(function() {
+                openItem(i-1);  
+                }, 200);
+            };
+            popup[i-1].classList.add('reopen');
           }
 
-          addOverlay();
-        
           openItem(i-1);  
-
-          popup[i-1].classList.add('reopen');
 
           let popupClose = popup[i-1].querySelector(".portfolio-info__close");
 

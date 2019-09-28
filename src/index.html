@@ -11,7 +11,9 @@
   <meta name="keywords" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link href="img/favicon.png" type="image/png" rel="shortcut icon"> -->
-  <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,400i,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,400i,700" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet"> -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.5/css/swiper.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
   <link rel="stylesheet" href="static/css/style.css?t=1562258773556" />
@@ -21,12 +23,35 @@
 </head>
 
 <body>
+    <noscript>
+      <div id="nojs">
+          <p>У вас отключен javascript. Пожалуйста, включите javascript для корректной работы сайта.</p>
+      </div>
+
+    </noscript>
+
+    <style type="text/css">
+      #nojs {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 10000;
+      }
+    </style>
+
     <div id="preloader">
       <div>
-          Подождите, идет загрузка сайта ...
-
-        </div>
-      
+          <picture>
+              <source srcset="static/img/logo.webp" type="image/webp">
+              <source srcset="static/img/logo.png" type="image/jpeg">
+              <img  src = "static/img/logo.png" alt="my photo">
+            </picture>        
+          </div>
       </div>
       
       <style type="text/css">
@@ -36,29 +61,27 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0, 0, 0, 1);
+          background: rgba(0, 0, 0, 0.95);
           z-index: 9999;
         }
       
         #preloader div {
-          background: #fff;
-          width: 260px;
-          height: 40px;
-          line-height: 40px;
-          border-radius: 8px;
-          font-family: arial;
-          font-size: 15px;
-          color: #111;
+          width: 360px;
+          height: 80px;
+          
           text-align: center;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
           position: fixed;
           z-index: 999;
           top: 0;
           left: 0;
           right: 0;
           bottom: 0;
-          margin: auto
+          margin: auto;
         }
+        #preloader div img {
+            width: 100%;
+            height: auto;
+          }
       </style>
       
       <script type="text/javascript">
@@ -69,10 +92,8 @@
       
             document.getElementById("preloader").style.display = "none";
       
-          }, 400);
-      
+          }, 600);
         };
-      
       </script>
   <a id="start" name="start"></a>
 
@@ -692,7 +713,7 @@
         <h2 class="section-title text text--nl text--hidden">Werk stap</h2>
 
         <div class="work__main">
-          <ul class="work__list work__slider swiper-container" data-aos="fade-up">
+          <ul class="work__list work__slider swiper-container" >
             <div class="work__slider-pagination swiper-pagination"></div>
 
             <div class="swiper-wrapper">
@@ -1382,25 +1403,24 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+          <p>Создание информационного лендинга "Дневник здоровья".</p>
+          <p>Был предоставлен psd макет на desktop-версию. Макет был сверстан pixel perfect. Далее мне было предложено реализовать адаптивные версии.</p>
         </div>
-
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
           <ul>
-            <li>HTML</li>
-            <li>CSS3</li>
-            <li>Less</li>
-            <li>Gulp</li>
+            <li>HTML/CSS3</li>
+            <li>SCSS</li>
+            <li>Webpack</li>
             <li>Pixel Perfect</li>
             <li>Full Responsive</li>
             <li>Adaptive</li>
+            <li>jQuery</li>
           </ul>
         </div>
 
         <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
+          <a href="https://myzdrav.evgktv.now.sh/" target="_blank">Демо</a>
         </div>
       </div>
     </div>
@@ -1515,13 +1535,12 @@
 
         <div class="portfolio-info__intro">
           <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+          <p>Верстка уникального шаблона, адаптация под различные устройства. Форма онлайн-записи.</p>
         </div>
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
           <ul>
-            <li>HTML</li>
-            <li>CSS3</li>
+            <li>HTML/CSS3</li>
             <li>Less</li>
             <li>Gulp</li>
             <li>Pixel Perfect</li>
@@ -1531,7 +1550,7 @@
         </div>
 
         <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
+          <a href="https://evgktv.github.io/borodinski-adaptive" target="_blank">Демо</a>
         </div>
       </div>
     </div>
@@ -1648,8 +1667,8 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+          <p>Разработка сайта для домашнего магазина по продажам handmade изделий.</p>
+          <p>Верстка уникального шаблона, адаптация под различные устройства. Форма онлайн заказа.</p>
         </div>
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
@@ -1663,15 +1682,12 @@
             <li>Adaptive</li>
           </ul>
         </div>
-
         <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
-        </div>
+            <a href="  https://evgktv.github.io/mishka" target="_blank">Демо</a>
+          </div>
       </div>
     </div>
   </li>
-
-
   <li class="portfolio-info__item hidden">
     <button class="portfolio-info__close"></button>
     <div class="portfolio-info__main">
@@ -1751,25 +1767,26 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+          <p>Разработка сайт для бадминтонного клуба.</p>
+          <p>Создание дизайна, верстка всех страниц, полная адаптация. Встраивание слайдеров. Использование CMS (wordpress). 
+            Установка плагинов. Помощь в ведении сайта в течение 3-х месяцев.</p>
         </div>
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
           <ul>
-            <li>HTML</li>
-            <li>CSS3</li>
-            <li>Less</li>
-            <li>Gulp</li>
-            <li>Pixel Perfect</li>
+            <li>HTML/CSS3</li>
+            <li>SCSS</li>
+            <li>WebPack</li>
+            <li>Web Design</li>
+            <li>jQuery</li>
+            <li>Wordpress</li>
             <li>Full Responsive</li>
             <li>Adaptive</li>
           </ul>
         </div>
-
         <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
-        </div>
+            <a href="https://evgktv.github.io/abc" target="_blank">Демо</a>
+          </div>
       </div>
     </div>
   </li>
@@ -1854,24 +1871,19 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+          <p>Создание сайта психологической онлайн помощи.</p>
+          <p>Верстка страницы и перенос ее на CMS (Wordpress).</p>
         </div>
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
           <ul>
-            <li>HTML</li>
-            <li>CSS3</li>
-            <li>Less</li>
+            <li>HTML/CSS3</li>
+            <li>SCSS</li>
             <li>Gulp</li>
-            <li>Pixel Perfect</li>
+            <li>jQuery</li>
             <li>Full Responsive</li>
-            <li>Adaptive</li>
+            <li>Wordpress</li>
           </ul>
-        </div>
-
-        <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
         </div>
       </div>
     </div>
@@ -1956,24 +1968,19 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+          <p>Сайт-визитка, лэндинг, для компании, занимающейся софт разработкой.</p>
+          <p>Создание дизайна, верстка, полная адаптация. Создание слайдера.</p>
         </div>
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
           <ul>
-            <li>HTML</li>
-            <li>CSS3</li>
-            <li>Less</li>
-            <li>Gulp</li>
-            <li>Pixel Perfect</li>
-            <li>Full Responsive</li>
-            <li>Adaptive</li>
+              <li>HTML/CSS3</li>
+              <li>SCSS</li>
+              <li>WebPack</li>
+              <li>Web Design</li>
+              <li>Full Responsive</li>
+              <li>Adaptive</li>
           </ul>
-        </div>
-
-        <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
         </div>
       </div>
     </div>
@@ -2074,14 +2081,13 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+          <p>Создание сайта для приложения фоторедактора.</p>
+          <p>Верстка по psd макетам, адаптация под различные устройства. Форма для участия в конкурсе. Фотоальбомы.</p>
         </div>
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
           <ul>
-            <li>HTML</li>
-            <li>CSS3</li>
+            <li>HTML/CSS3</li>
             <li>Less</li>
             <li>Gulp</li>
             <li>Pixel Perfect</li>
@@ -2089,10 +2095,9 @@
             <li>Adaptive</li>
           </ul>
         </div>
-
         <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
-        </div>
+            <a href="https://evgktv.github.io/pink" target="_blank">Демо</a>
+          </div>
       </div>
     </div>
   </li>
@@ -2208,7 +2213,7 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
+          <p>Создание сайта о туристических маршрутах небольшого городка.</p>
           <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
         </div>
         <div class="portfolio-info__info">
@@ -2222,10 +2227,6 @@
             <li>Full Responsive</li>
             <li>Adaptive</li>
           </ul>
-        </div>
-
-        <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
         </div>
       </div>
     </div>
@@ -2285,24 +2286,19 @@
         </div>
 
         <div class="portfolio-info__intro">
-          <p>Разработка небольшого сайта для барбершопа.</p>
-          <p>Верстка уникального шаблона, адаптация под различные устройства.</p>
+            <p>Разработка сайта для домашнего магазина по продажам мороженного.</p>
+            <p>Верстка уникального шаблона, адаптация под различные устройства. Формы онлайн заказа и покупки.</p>
         </div>
         <div class="portfolio-info__info">
           <span class="portfolio-info__tech">Технологии:</span>
           <ul>
-            <li>HTML</li>
-            <li>CSS3</li>
+            <li>HTML/CSS3</li>
             <li>Less</li>
             <li>Gulp</li>
             <li>Pixel Perfect</li>
             <li>Full Responsive</li>
             <li>Adaptive</li>
           </ul>
-        </div>
-
-        <div class="portfolio-info__link">
-          <a href="https://evgktv.github.io/mishka/" target="_blank">Посмотреть</a>
         </div>
       </div>
     </div>
